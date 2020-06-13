@@ -1,0 +1,478 @@
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: Clip;
+  src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+.sign {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  background-image: radial-gradient(ellipse 50% 35% at 50% 50%, #09315C, transparent);
+  transform: translate(-50%, -50%);
+  letter-spacing: 2;
+  left: 50%;
+  top: 50%;
+  font-family: "Clip";
+  text-transform: uppercase;
+  font-size: 6em;
+  color: #e6edff;
+  text-shadow: 0 0 0.6rem #e6edff, 0 0 1.5rem #00AFF0,
+ -0.2rem 0.1rem 1rem #00AFF0, 0.2rem 0.1rem 1rem #00AFF0,
+ 0 -0.5rem 2rem #005BAC, 0 0.5rem 3rem #005BAC;
+  animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@keyframes blink {
+  0%,
+  22%,
+  36%,
+  75% {
+    color: #f0e6ff;
+    text-shadow: 0 0 0.6rem #f0e6ff, 0 0 1.5rem #00AFF0,
+ -0.2rem 0.1rem 1rem #00AFF0, 0.2rem 0.1rem 1rem #00AFF0,
+ 0 -0.5rem 2rem #006AF2, 0 0.5rem 3rem #006AF2;
+  }
+  28%,
+  33% {
+    color: #00AFF0;
+    text-shadow: none;
+  }
+  82%,
+  97% {
+    color: #005BAC;
+    text-shadow: none;
+  }
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+}
+
+@keyframes shine {
+  0% {
+    color: #385ABD;
+    text-shadow: none;
+  }
+  100% {
+    color: #e6faff;
+    text-shadow: 0 0 0.6rem #e6faff, 0 0 1.5rem #008CFE,
+ -0.2rem 0.1rem 1rem #008CFE, 0.2rem 0.1rem 1rem #008CFE,
+ 0 -0.5rem 2rem #2A4C7B, 0 0.5rem 3rem #2F578C;
+    margin-left: -350px;
+  }
+}
+
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.9;
+  }
+  6% {
+    opacity: 0.85;
+  }
+  8% {
+    opacity: 0.95;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  11% {
+    opacity: 0.922;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  14% {
+    opacity: 0.95;
+  }
+  16% {
+    opacity: 0.98;
+  }
+  17% {
+    opacity: 0.9;
+  }
+  19% {
+    opacity: 0.93;
+  }
+  20% {
+    opacity: 0.99;
+  }
+  24% {
+    opacity: 1;
+  }
+  26% {
+    opacity: 0.94;
+  }
+  28% {
+    opacity: 0.98;
+  }
+  37% {
+    opacity: 0.93;
+  }
+  38% {
+    opacity: 0.5;
+  }
+  39% {
+    opacity: 0.96;
+  }
+  42% {
+    opacity: 1;
+  }
+  44% {
+    opacity: 0.97;
+  }
+  46% {
+    opacity: 0.94;
+  }
+  56% {
+    opacity: 0.9;
+  }
+  58% {
+    opacity: 0.9;
+  }
+  60% {
+    opacity: 0.99;
+  }
+  68% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.9;
+  }
+  72% {
+    opacity: 0.95;
+  }
+  93% {
+    opacity: 0.93;
+  }
+  95% {
+    opacity: 0.95;
+  }
+  97% {
+    opacity: 0.93;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  margin-left: -8px;
+  height: 94px;
+  top: -0px;
+  background: #000000;
+}
+
+header a {
+  position: absolute;
+  width: 74px;
+  height: 23px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22.77px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-left: 80px;
+  margin-top: 34px;
+}
+
+header .home {
+  margin-left: 315px;
+}
+
+header .register {
+  margin-left: 479px;
+}
+
+header .document {
+  margin-left: 662px;
+}
+
+header .signin {
+  margin-left: 865px;
+  width: 100px;
+}
+
+header .contact {
+  margin-left: 1045px;
+  width: 160px;
+}
+
+/*main*/
+main {
+  background: linear-gradient(178.83deg, #000000 1.9%, rgba(255, 255, 255, 0) 163.79%);
+  width: 101.2%;
+  height: 87vh;
+  margin-left: -8px;
+  margin-top: 85px;
+}
+
+#hero {
+  width: 250px;
+  height: 358px;
+  position: relative;
+  left: 296px;
+  top: 70px;
+}
+
+@keyframes hero-stance {
+  from {
+    top: 0;
+  }
+  to {
+    top: -10px;
+  }
+}
+
+#hero .stance {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  animation-name: hero-stance;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: easy-in-out;
+}
+
+#hero .attack {
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+#hero.idle .stance {
+  visibility: visible;
+}
+
+#hero.attack .attack {
+  visibility: visible;
+  top: -30px;
+}
+
+@keyframes shadow {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 225px;
+    left: 12.5px;
+  }
+}
+
+#hero .shadow {
+  background-image: url(https://anti-captcha.com/images/mainpage/heroshadow.png);
+  width: 225px;
+  height: 84px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -50px;
+  z-index: 1;
+  animation-name: shadow;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#hero.attack .shadow {
+  animation-name: none;
+  width: 225px;
+  left: 12.5px;
+}
+
+@keyframes laser {
+  from {
+    width: 150px;
+  }
+  to {
+    width: 550px;
+  }
+}
+
+#hero .laser {
+  background-image: url(https://anti-captcha.com/images/mainpage/beam.png);
+  width: 150px;
+  height: 60px;
+  left: 145px;
+  position: absolute;
+  top: 22px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation-name: laser;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#hero .laser::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  right: 0;
+  top: 1px;
+  background-color: #ffe500;
+  position: absolute;
+  box-shadow: 0 0 10px 3px #ffe500;
+}
+
+.APO {
+  position: absolute;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 55px;
+  line-height: 64px;
+  color: #FFFFFF;
+  margin-left: 597px;
+  margin-top: -293px;
+}
+
+main .registration {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42.2261px;
+  line-height: 49px;
+  color: #000000;
+  margin-left: 914px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #EAB806;
+  border-radius: 65px;
+  width: 20px;
+}
+
+main .slideshow-container img {
+  width: 100;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  top: 160px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
